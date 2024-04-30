@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -8,36 +8,54 @@ body {
     color: white;
     background-color: black;
 }
-
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 5% 0 5%;
 }
-
-.logo img {
-    width: 100px; /* Adjust as needed */
+.logo a img {
+    height: 79px;
 }
-
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+.listNav {
+    display: flex;
+    gap: 2em;
+    list-style-type: none;
+    text-transform: uppercase;
 }
-
-nav ul li a {
-    color: white;
+li a {
     text-decoration: none;
+    color: #fff;
 }
-
-.nav-bar ul li :hover::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: rgb(204, 0, 0);
-    display: block;
-    margin: auto;
-    transition: 1s;
+ul li {
+    padding-bottom: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+ul li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+    background: red; /* the color */
+    transition: 0.3s, translate 0s 0.3s;
+}
+ul:hover li:before {
+    scale: 1;
+}
+ul li:hover:before {
+    translate: 0;
+    transition: 0.3s;
+}
+ul:hover li:has(~ li:hover):before {
+    translate: 100% 0;
+    transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+ul:hover li:hover ~ li:before {
+    translate: -100% 0;
+    transition: 0.2s 0.2s, scale 0s 0.4s;
 }
 
 .main-content {
@@ -45,7 +63,7 @@ nav ul li a {
 }
 
 .background-image {
-    background-image: url('tupac_background.jpg'); /* mettre une photo de tupac */
+    background-image: url("tupac_background.jpg"); /* mettre une photo de tupac */
     background-size: cover;
     background-position: center;
     height: 500px; /* Ajuster au besoin */
@@ -60,7 +78,10 @@ nav ul li a {
 }
 
 footer {
+    display: flex;
     background-color: #383838;
     color: white;
-    text-align: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
 }
