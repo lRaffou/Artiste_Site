@@ -1,0 +1,9 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section article img {
+    width: 700px;
+}

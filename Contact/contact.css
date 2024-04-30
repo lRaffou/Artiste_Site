@@ -1,5 +1,5 @@
 .right_conatct_social_icon{
-    background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
+    background: linear-gradient(to top right, red -5%, #8f10b7 100%);
 }
 .contact_us{
    padding: 120px 0px;
@@ -46,7 +46,7 @@
 .contact_field .form-control:focus{
    box-shadow: none;
    outline: none;
-   border-bottom: 2px solid #1325e8;
+   border-bottom: 2px solid red;
 }
 .contact_field .form-control::placeholder{
    font-size: 13px;
@@ -80,7 +80,7 @@
 }
 
 button.contact_form_submit {
-   background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
+   background: linear-gradient(to top right, red -5%, #8f10b7 100%);
    border: none;
    color: #fff;
    padding: 10px 15px;
